@@ -9,24 +9,37 @@ import warnings
 warnings.filterwarnings('ignore')
 
 def get_top_binance_coins(limit=50):
-    url = "https://api.binance.com/api/v3/ticker/24hr"
+    url = "https://scanner.tradingview.com/crypto/scan"
+    post_data = {
+        "filter": [
+            {"left": "exchange", "operation": "equal", "right": "BINANCE"},
+            {"left": "name", "operation": "match", "right": "USDT$"}
+        ],
+        "sort": {"sortBy": "volume", "sortOrder": "desc"},
+        "columns": ["name", "volume"],
+        "range": [0, 100]
+    }
+    headers = {'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+    
     try:
-        resp = requests.get(url).json()
+        resp = requests.post(url, json=post_data, headers=headers).json()
+        data_list = resp.get('data', [])
     except Exception as e:
-        print("Binance API error:", e)
+        print("TradingView API error:", e)
         return []
         
     stable = ['USDCUSDT', 'BUSDUSDT', 'TUSDUSDT', 'FDUSDUSDT', 'EURUSDT', 'TRYUSDT']
     coins = []
-    for item in resp:
-        sym = item['symbol']
-        if sym.endswith('USDT') and sym not in stable and 'UPUSDT' not in sym and 'DOWNUSDT' not in sym:
-            vol = float(item['quoteVolume'])
-            coins.append({'symbol': sym, 'volume': vol})
     
-    coins.sort(key=lambda x: x['volume'], reverse=True)
+    for item in data_list:
+        sym = item['d'][0]
+        if sym not in stable and 'UPUSDT' not in sym and 'DOWNUSDT' not in sym:
+            coins.append(sym)
+            if len(coins) >= limit:
+                break
+                
     # yfinance uses -USD
-    yf_symbols = [c['symbol'].replace('USDT', '-USD') for c in coins[:limit]]
+    yf_symbols = [c.replace('USDT', '-USD') for c in coins]
     return yf_symbols
 
 def run_quant_engine():
@@ -90,7 +103,6 @@ def run_quant_engine():
     scores = []
     target_corr = 0.8 if "YÜKSELİŞ" in regime_label else 0.0
     if "KRİZ" in regime_label:
-        # Cash defense triggers in Node.js when it sees KRİZ, so scores don't matter as much, but we calculate anyway.
         target_corr = -1.0
         
     for sym in yf_symbols:
@@ -101,7 +113,6 @@ def run_quant_engine():
         v = norm_vols[sym]
         corr_diff = abs(target_corr - c)
         
-        # W1=0.2 (Vol), W2=0.6 (Constant), W3=0.2 (Corr diff) - Best params from WFA
         multi_score = (0.2 * v) + (0.6 * 0.5) - (0.2 * corr_diff)
         
         binance_sym = sym.replace('-USD', 'USDT')
@@ -111,7 +122,6 @@ def run_quant_engine():
             "score": float(multi_score)
         })
         
-    # Sort by score descending
     scores.sort(key=lambda x: x['score'], reverse=True)
     
     result = {
