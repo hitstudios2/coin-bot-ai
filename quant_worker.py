@@ -51,8 +51,8 @@ def run_quant_engine():
     print(f"Downloading data for {len(yf_symbols)} coins...")
     data = yf.download(yf_symbols, period="180d", interval="1d", progress=False)['Close']
     data.dropna(axis=1, how='all', inplace=True)
-    data.ffill(inplace=True)
-    data.dropna(inplace=True)
+    data = data.loc[:, data.count() >= 30]
+    data = data.ffill().bfill()
     
     returns = np.log(data / data.shift(1)).dropna()
     
@@ -103,6 +103,7 @@ def run_quant_engine():
     scores = []
     target_corr = 0.8 if "YÜKSELİŞ" in regime_label else 0.0
     if "KRİZ" in regime_label:
+        # Cash defense triggers in Node.js when it sees KRİZ, so scores don't matter as much, but we calculate anyway.
         target_corr = -1.0
         
     for sym in yf_symbols:
@@ -113,6 +114,7 @@ def run_quant_engine():
         v = norm_vols[sym]
         corr_diff = abs(target_corr - c)
         
+        # W1=0.2 (Vol), W2=0.6 (Constant), W3=0.2 (Corr diff) - Best params from WFA
         multi_score = (0.2 * v) + (0.6 * 0.5) - (0.2 * corr_diff)
         
         binance_sym = sym.replace('-USD', 'USDT')
@@ -122,6 +124,7 @@ def run_quant_engine():
             "score": float(multi_score)
         })
         
+    # Sort by score descending
     scores.sort(key=lambda x: x['score'], reverse=True)
     
     result = {
