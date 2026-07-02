@@ -2,190 +2,175 @@
     "btc_regime": "D\u00dc\u015e\u00dc\u015e (YATAY)",
     "scores": [
         {
-            "symbol": "HMSTRUSDT",
-            "correlation": 0.1138680156476264,
-            "score": 0.4736588240117451
+            "symbol": "PONDUSDT",
+            "correlation": 0.09391849226693641,
+            "score": 0.4750751193386156
         },
         {
-            "symbol": "PONDUSDT",
-            "correlation": 0.22182615959825164,
-            "score": 0.45563476808034964
+            "symbol": "HMSTRUSDT",
+            "correlation": 0.048092459039925546,
+            "score": 0.4692537486607763
         },
         {
             "symbol": "SAHARAUSDT",
-            "correlation": 0.19529261086800936,
-            "score": 0.4543096497494806
-        },
-        {
-            "symbol": "ENAUSDT",
-            "correlation": -0.015049194945605658,
-            "score": 0.4087743801437962
-        },
-        {
-            "symbol": "MEMEUSDT",
-            "correlation": 0.35492125727990964,
-            "score": 0.35125884203883323
-        },
-        {
-            "symbol": "BONKUSDT",
-            "correlation": 0.5591154983158778,
-            "score": 0.3491032512005549
+            "correlation": 0.2462734276241025,
+            "score": 0.42881599208956156
         },
         {
             "symbol": "TLMUSDT",
-            "correlation": 0.6091394965410243,
-            "score": 0.32923034482994784
+            "correlation": 0.4167739556995605,
+            "score": 0.4166452088600879
         },
         {
-            "symbol": "CHZUSDT",
-            "correlation": 0.3502306377146593,
-            "score": 0.3277997682481156
+            "symbol": "ENAUSDT",
+            "correlation": 0.03123561982341256,
+            "score": 0.3971209717727018
+        },
+        {
+            "symbol": "MEMEUSDT",
+            "correlation": 0.25200282892694703,
+            "score": 0.3583137954373513
+        },
+        {
+            "symbol": "BONKUSDT",
+            "correlation": 0.45191668390449263,
+            "score": 0.34927129857021016
         },
         {
             "symbol": "XECUSDT",
-            "correlation": 0.5331483932496333,
-            "score": 0.3231466806463554
-        },
-        {
-            "symbol": "WUSDT",
-            "correlation": 0.4616190466984772,
-            "score": 0.31244683098551485
-        },
-        {
-            "symbol": "NOTUSDT",
-            "correlation": 0.3885978592107939,
-            "score": 0.3017990990794038
-        },
-        {
-            "symbol": "TOWNSUSDT",
-            "correlation": 0.42165940463067697,
-            "score": 0.30005799586591564
-        },
-        {
-            "symbol": "GUNUSDT",
-            "correlation": 0.4312608832521949,
-            "score": 0.28792240283249726
-        },
-        {
-            "symbol": "HEMIUSDT",
-            "correlation": 0.6161955789710553,
-            "score": 0.28682948032401884
-        },
-        {
-            "symbol": "GUSDT",
-            "correlation": 0.08240047765848439,
-            "score": 0.28617996009234786
+            "correlation": 0.4415103353212941,
+            "score": 0.32510526511541077
         },
         {
             "symbol": "SHIBUSDT",
-            "correlation": 0.5129969578683625,
-            "score": 0.28398336313797423
+            "correlation": 0.2216301697479936,
+            "score": 0.3201303419717918
         },
         {
-            "symbol": "ACTUSDT",
-            "correlation": 0.09765003350048378,
-            "score": 0.28046999329990324
+            "symbol": "NOTUSDT",
+            "correlation": 0.28842630769350036,
+            "score": 0.31471955565123544
         },
         {
-            "symbol": "WINUSDT",
-            "correlation": 0.48157694651567645,
-            "score": 0.25875321978895083
+            "symbol": "HEMIUSDT",
+            "correlation": 0.45075382518009544,
+            "score": 0.3110304467299979
         },
         {
-            "symbol": "HOTUSDT",
-            "correlation": 0.5535310084842584,
-            "score": 0.2571646455406383
+            "symbol": "TOWNSUSDT",
+            "correlation": 0.35874266289518386,
+            "score": 0.3030901946047142
         },
         {
-            "symbol": "CHRUSDT",
-            "correlation": 0.6390179703993715,
-            "score": 0.2540596592199931
+            "symbol": "GUSDT",
+            "correlation": 0.11771616953053396,
+            "score": 0.28281272424311177
         },
         {
             "symbol": "TURBOUSDT",
-            "correlation": 0.5930401599088186,
-            "score": 0.24893569385407838
+            "correlation": 0.5079298040756085,
+            "score": 0.2588294768979459
+        },
+        {
+            "symbol": "HOTUSDT",
+            "correlation": 0.5385929695608762,
+            "score": 0.2568126408954775
+        },
+        {
+            "symbol": "QIUSDT",
+            "correlation": NaN,
+            "score": NaN
+        },
+        {
+            "symbol": "GPSUSDT",
+            "correlation": 0.4289919402167507,
+            "score": 0.30537146250776914
+        },
+        {
+            "symbol": "GUNUSDT",
+            "correlation": 0.3642160676095171,
+            "score": 0.2940026845081133
+        },
+        {
+            "symbol": "WINUSDT",
+            "correlation": 0.3922680446792642,
+            "score": 0.2726103074092631
         },
         {
             "symbol": "LUNCUSDT",
-            "correlation": 0.6330482905070183,
-            "score": 0.2476256024293679
+            "correlation": 0.5354042411781982,
+            "score": 0.25625184410422125
         },
         {
-            "symbol": "BOMEUSDT",
-            "correlation": 0.6622385140401041,
-            "score": 0.22867924831222927
-        },
-        {
-            "symbol": "SCUSDT",
-            "correlation": 0.6472266622995014,
-            "score": 0.2233094056600872
-        },
-        {
-            "symbol": "SOLVUSDT",
-            "correlation": 0.643409385415117,
-            "score": 0.22267048439071435
-        },
-        {
-            "symbol": "ONEUSDT",
-            "correlation": 0.4372123603910133,
-            "score": 0.22141504672716356
-        },
-        {
-            "symbol": "LINEAUSDT",
-            "correlation": 0.7031605102851313,
-            "score": 0.22135305192642313
-        },
-        {
-            "symbol": "SPELLUSDT",
-            "correlation": 0.6684172548325535,
-            "score": 0.2187796165794159
-        },
-        {
-            "symbol": "FLOKIUSDT",
-            "correlation": 0.7301189360706929,
-            "score": 0.21725652034304502
-        },
-        {
-            "symbol": "AMPUSDT",
-            "correlation": 0.7375640962347413,
-            "score": 0.20932554573682327
-        },
-        {
-            "symbol": "RSRUSDT",
-            "correlation": 0.7237419747992411,
-            "score": 0.20725486355923997
-        },
-        {
-            "symbol": "GALAUSDT",
-            "correlation": 0.7554001264765507,
-            "score": 0.20564262935414235
+            "symbol": "SXTUSDT",
+            "correlation": 0.5703216694921689,
+            "score": 0.25024738134753305
         },
         {
             "symbol": "SLPUSDT",
-            "correlation": 0.7601323352698246,
-            "score": 0.20430947071583683
+            "correlation": 0.6003218380994662,
+            "score": 0.24386165263519077
         },
         {
-            "symbol": "IOSTUSDT",
-            "correlation": 0.7271575441776661,
-            "score": 0.20222089661601647
+            "symbol": "BOMEUSDT",
+            "correlation": 0.5418698489795863,
+            "score": 0.24266402499401668
+        },
+        {
+            "symbol": "LINEAUSDT",
+            "correlation": 0.6168224368506571,
+            "score": 0.23070945947863278
+        },
+        {
+            "symbol": "FLOKIUSDT",
+            "correlation": 0.6452846909129479,
+            "score": 0.2251688436881121
+        },
+        {
+            "symbol": "SCUSDT",
+            "correlation": 0.6211268909154257,
+            "score": 0.22510067637577652
+        },
+        {
+            "symbol": "SPELLUSDT",
+            "correlation": 0.6334178065713991,
+            "score": 0.22271184261170335
         },
         {
             "symbol": "CKBUSDT",
-            "correlation": 0.7644457120711282,
-            "score": 0.20138547405030374
+            "correlation": 0.6551022901844041,
+            "score": 0.21717385406140122
+        },
+        {
+            "symbol": "GALAUSDT",
+            "correlation": 0.6644566420655597,
+            "score": 0.2163093753822994
+        },
+        {
+            "symbol": "AMPUSDT",
+            "correlation": 0.6764693873864314,
+            "score": 0.2150958991872422
+        },
+        {
+            "symbol": "IOSTUSDT",
+            "correlation": 0.6664672531479345,
+            "score": 0.21003431004345235
         },
         {
             "symbol": "MBLUSDT",
-            "correlation": 0.7719606239962361,
-            "score": 0.19782556071233415
+            "correlation": 0.7732750081619975,
+            "score": 0.1949125942003007
+        },
+        {
+            "symbol": "ONEUSDT",
+            "correlation": 0.6165117493643001,
+            "score": 0.1879109030213325
         },
         {
             "symbol": "DOGEUSDT",
-            "correlation": 0.8766135256199225,
-            "score": 0.1676588410912057
+            "correlation": 0.8331025530577411,
+            "score": 0.1702008945122924
         }
     ],
-    "updated_at": "2026-07-02T03:47:34.396654+00:00"
+    "updated_at": "2026-07-02T07:34:46.126139+00:00"
 }
